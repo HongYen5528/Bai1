@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giới thiệu bản thân</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="card">
-    <h1>GIỚI THIỆU BẢN THÂN</h1>
-    <p><strong>Họ và tên:</strong> Trần Hồng Yến</p>
-    <p><strong>Ngày sinh:</strong> 05/05/2008</p>
-    <p><strong>Quê quán:</strong> Thành phố Hồ Chí Minh</p>
-    <p><strong>Sở thích:</strong> Nghe nhạc, đọc sách, du lịch</p>
-    <p class="message">Rất vui được làm quen với mọi người!</p>
-  </main>
-</body>
-</html>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy tính cơ bản</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f1f5f9;display:grid;place-items:center;min-height:100vh;margin:0}
+main{background:white;padding:28px;border-radius:16px;box-shadow:0 8px 25px #0001;width:min(360px,85vw)}
+h1{font-size:24px;text-align:center;color:#1e3a8a}
+input,select,button{box-sizing:border-box;width:100%;padding:12px;margin:8px 0;border:1px solid #cbd5e1;border-radius:8px;font-size:16px}
+button{background:#2563eb;color:white;border:0;cursor:pointer}#result{font-weight:bold;text-align:center;color:#166534;min-height:24px}
+</style></head><body><main>
+<h1>Máy tính cơ bản</h1>
+<input id="a" type="number" placeholder="Nhập số thứ nhất">
+<select id="op"><option value="+">Cộng (+)</option><option value="-">Trừ (−)</option><option value="*">Nhân (×)</option><option value="/">Chia (÷)</option></select>
+<input id="b" type="number" placeholder="Nhập số thứ hai">
+<button onclick="calculate()">Tính kết quả</button><p id="result"></p>
+</main><script>
+function calculate(){
+ const a=Number(document.getElementById('a').value), b=Number(document.getElementById('b').value);
+ const op=document.getElementById('op').value; let result;
+ if(document.getElementById('a').value===''||document.getElementById('b').value===''){result='Vui lòng nhập đủ hai số.'}
+ else if(op==='/'&&b===0){result='Không thể chia cho 0.'}
+ else {switch(op){case '+':result=a+b;break;case '-':result=a-b;break;case '*':result=a*b;break;case '/':result=a/b;break;}}
+ document.getElementById('result').textContent='Kết quả: '+result;
+}
+</script></body></html>
