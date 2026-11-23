@@ -1,1 +1,18 @@
 # Bai1
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân</title>
+</head>
+<body>
+    <h1>GIỚI THIỆU BẢN THÂN</h1>
+    <p><b>Họ và tên:</b> Trần Hồng Yến</p>
+    <p><b>Ngày sinh:</b> 05/05/2008</p>
+    <p><b>Quê quán:</b> Thành phố Hồ Chí Minh</p>
+    <p><b>Sở thích:</b> Nghe nhạc, đọc sách,
+    du lịch.</p>
+    <p><i>Rất vui được làm quen với mọi người!</i></p>
+</body>
+</html>
